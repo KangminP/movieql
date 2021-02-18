@@ -17,7 +17,8 @@ import { getMovies, getMovie, geSuggestions } from "./db"
 
 const resolvers = {
     Query: {
-        movies: (_, {limit, rating}) => getMovies(limit, rating),
+        // movies: (_, {limit, rating}) => getMovies(limit, rating),
+        movies: () => getMovies(),
         movie: (_, {id}) => getMovie(id),
         suggestions: (_, {id}) => geSuggestions(id)
     }
